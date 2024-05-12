@@ -6,10 +6,13 @@
         "module": "ES2020",
         "moduleResolution": "Bundler",
         "lib": ["DOM", "ES2021"],
-        "target": "ES2021"
+        "target": "ES2021",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "include": ["src/**/*.ts"],
     "exclude": [
         "node_modules"
-    ]
+    ],
 }

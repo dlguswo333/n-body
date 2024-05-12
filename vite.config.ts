@@ -1,4 +1,5 @@
 import {defineConfig} from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
     base: undefined,
@@ -11,5 +12,5 @@ export default defineConfig({
     resolve: {
         extensions: ['.js', '.ts'],
     },
-    plugins: [],
+    plugins: [tsconfigPaths()],
 });

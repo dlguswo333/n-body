@@ -2,7 +2,7 @@
 module.exports = {
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'no-relative-import-paths'],
   env: {
     browser: true
   },
@@ -33,5 +33,12 @@ module.exports = {
         arrow: {before: true, after: true}
       }
     }],
+    "no-relative-import-paths/no-relative-import-paths": [
+      'error',
+      {
+        rootDir: 'src',
+        prefix: '@',
+      }
+    ],
   }
 };
